@@ -5,3 +5,5 @@ const houses = [
     {numberOfBedrooms:"7", numberOfBathrooms:"8", hasPorch:"No Porch", hasDriveWay:"Has Driveway"},
     {numberOfBedrooms:"4", numberOfBathrooms:"2", hasPorch:"Has Porch", hasDriveWay:"Has Driveway"}
 ]
+
+module.exports = {houses}

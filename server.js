@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const logger = require('morgan');
+const {apartments} = require('./apartments')
+const {houses} = require('./houses');
 const PORT = process.env.PORT || 3001
 
 const app = express()
@@ -12,19 +14,18 @@ app.get('/', (request, response) => {
 
 //Part 2
 app.get('/apartments', (request, response) => {
-    response.send({apartments});
+    response.send(apartments);
 })
 
 //Part 3
 app.get('/houses', (request, response) => {
-    response.send({houses});
+    response.send(houses);
 })
 
 //Part 4
-app.get('/houses/hasDriveWay', (request, response) => {
-    
-    const driveway = request.params.hasDriveWay
-    response.send({driveway})
+app.get('/houses/:id', (request, response) => {    
+    const id = request.params.id
+    response.send(houses[id])
 })
 
 //Part 5 - Bonus

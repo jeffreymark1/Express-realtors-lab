@@ -6,3 +6,4 @@ const apartments = [
     {sqFt:"4000", price:"500000", address:"666 Robbins St", isPetFriendly:"Pets Allowed", waterfrontView: "Waterfront View"}
 ]
 
+module.exports = {apartments}
